@@ -2,6 +2,8 @@
 
 This is a playground for me to test and document my analytical engineering skills.
 
+![image](./images/wisemuffin.JPG)
+
 ## repos
 
 This project is broken down into several repos to isolate environments and to simplify CICD.
