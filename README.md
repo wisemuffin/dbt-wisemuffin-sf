@@ -44,7 +44,9 @@ TODO
 
 ## dbt projects
 
-### dbt_trading
+### bt-wisemuffin-sf-trading
+
+repo: [dbt-wisemuffin-sf-trading](https://github.com/wisemuffin/dbt-wisemuffin-sf-trading)
 
 This is build from snowflakes quick start [Accelerating Data Engineering with Snowflake & dbt CLI](https://quickstarts.snowflake.com/guide/data_engineering_with_dbt_cli/index.html?index=..%2F..index#1)
 
