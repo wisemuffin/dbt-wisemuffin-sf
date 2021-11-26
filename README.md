@@ -1,6 +1,13 @@
-# snowflake and dbt
+# snowflake and dbt (plus other goodies)
 
-This project is a playground for me to test out my analytical engineering skills, apply and demo new features.
+This is a playground for me to test and document my analytical engineering skills.
+
+## repos
+
+This project is broken down into several repos to isolate environments and to simplify CICD.
+
+- [dbt-wisemuffin-sf-trading](https://github.com/wisemuffin/dbt-wisemuffin-sf-trading) - demo dbt features
+- [terraform-snowflake-fast-data-warehouse](https://github.com/wisemuffin/terraform-snowflake-fast-data-warehouse) - manages all cloud infrastructure.
 
 ## architecture
 TODO
