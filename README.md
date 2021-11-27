@@ -12,7 +12,7 @@ This project is broken down into several repos to isolate environments and to si
 - [terraform-snowflake-fast-data-warehouse](https://github.com/wisemuffin/terraform-snowflake-fast-data-warehouse) - manages all cloud infrastructure.
 
 ## architecture
-TODO
+![image](./images/architecturedrawio.png)
 
 ## features - snowflake
 
@@ -39,6 +39,8 @@ By default, dbt is [generating a schema name](https://docs.getdbt.com/docs/build
 ### CICD
 
 TODO
+
+![image](./images/cicd.drawio.png)
 
 ### lineage in cloud
  TODO
