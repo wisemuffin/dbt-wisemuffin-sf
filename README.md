@@ -3,7 +3,7 @@
 This is a playground for me to test and document my analytical engineering skills.
 
 
-<img src="./images/wisemuffin.JPG" alt="drawing" width="30"/>
+<img src="./images/wisemuffin.JPG" alt="drawing" width="60"/>
 
 ## repos
 
