@@ -5,15 +5,15 @@ This is a playground for me to test and document my analytical engineering skill
 
 <img src="./images/wisemuffin.JPG" alt="drawing" width="60"/>
 
+## architecture
+![image](./images/architecturedrawio.png)
+
 ## repos
 
 This project is broken down into several repos to isolate environments and to simplify CICD.
 
 - [dbt-wisemuffin-sf-trading](https://github.com/wisemuffin/dbt-wisemuffin-sf-trading) - demo dbt features
 - [terraform-snowflake-fast-data-warehouse](https://github.com/wisemuffin/terraform-snowflake-fast-data-warehouse) - manages all cloud infrastructure.
-
-## architecture
-![image](./images/architecturedrawio.png)
 
 ## features - snowflake
 
