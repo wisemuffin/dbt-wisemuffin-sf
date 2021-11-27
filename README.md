@@ -2,7 +2,8 @@
 
 This is a playground for me to test and document my analytical engineering skills.
 
-![image](./images/wisemuffin.JPG)
+
+<img src="./images/wisemuffin.JPG" alt="drawing" width="30"/>
 
 ## repos
 
