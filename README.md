@@ -13,6 +13,7 @@ This is a playground for me to test and document my analytical engineering skill
 This project is broken down into several repos to isolate environments and to simplify CICD.
 
 - [dbt-wisemuffin-sf-trading](https://github.com/wisemuffin/dbt-wisemuffin-sf-trading) - demo dbt features
+- [data-cicd-tpch](https://github.com/wisemuffin/data-cicd-tpch) - demo dbt with a CICD pipeline
 - [terraform-snowflake-fast-data-warehouse](https://github.com/wisemuffin/terraform-snowflake-fast-data-warehouse) - manages all cloud infrastructure.
 
 ## features - snowflake
