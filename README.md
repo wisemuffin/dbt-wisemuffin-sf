@@ -26,11 +26,47 @@ if you go in Snowflake UI and click ‘History' icon on top, you are going to se
 
 [source](https://quickstarts.snowflake.com/guide/data_engineering_with_dbt_cli/index.html?index=..%2F..index#6)
 
-## resource monitor
+### resource monitor
 
 Ideally this will be included in my terraform infrastructure as code. However currently due to the limitation of only accountadmin role only have the ability to create this resource i have set this up manually.s
 
 ![image](./images/snowflake_resource_monitor.png)
+
+### external functions (integration with AWS sagemaker)
+
+[example](https://quickstarts.snowflake.com/guide/recommendation_engine_aws_sagemaker/index.html?index=..%2F..index#0)
+
+external functions let you bind a function in snowflake to a compute layer outside of snowflake. I.e. in this example i am executing a function in SQL but behind the scenes its requesting some AWS lambda functions written in python to call AWS sagemaker's APIs.
+
+I have setup 3 functions that will 
+- train_and_get_recommendations - train sagemaker model with snowflake data
+- deploy_model - deploy an endpoint so that your model can be used via an api
+- invoke_model - we can then invoke the deployed model
+
+```sql
+-- You'll need to specify two parameters. First, MOVIELENS.PUBLIC.ratings_train_data is the input table containing the training data. Second, MOVIELENS.PUBLIC.user_movie_recommendations, is the output table where the top 10 predictions will be stored.
+
+select train_and_get_recommendations('MOVIELENS.PUBLIC.ratings_train_data','MOVIELENS.PUBLIC.user_movie_recommendations');
+
+select * from user_movie_recommendations limit 10;
+
+select deploy_model('movielens-model-v1', 's3://sagemaker-snf-demo-wisemuffin/training-job-20211201005747/output/model.tar.gz');
+
+-- create a table to hold pairs of users and movies where we DO NOT have a rating
+create or replace table no_ratings (USERID float, MOVIEID float);
+
+insert into no_ratings (USERID, MOVIEID) values
+    ('1', '610'),
+    ('10', '313'),
+    ('10', '297'),
+    ('5', '18'),
+    ('5', '19');
+
+--real-time prediction for an individual movie for a particular user
+select nr.USERID, nr.MOVIEID, m.title, invoke_model('movielens-model-v1', nr.USERID, nr.MOVIEID) as rating_prediction 
+from no_ratings nr, movies m
+where nr.movieid = m.movieid;
+```
 
 ## features - dbt
 
