@@ -68,6 +68,10 @@ from no_ratings nr, movies m
 where nr.movieid = m.movieid;
 ```
 
+### feature engineering
+
+[Zero Copy Cloning](https://www.youtube.com/watch?v=yQIMmXg7Seg) that will create a new copy of the data by only making a copy of the metadata of the objects
+
 ## features - dbt
 
 ### custom schema naming
@@ -76,7 +80,9 @@ By default, dbt is [generating a schema name](https://docs.getdbt.com/docs/build
 
 ### CICD
 
-TODO
+I have demoed a CICD pipeline on [youtube](https://www.youtube.com/watch?v=uotDffI33jg&t=1382s)
+
+repo: [data-cicd-tpch](https://github.com/wisemuffin/data-cicd-tpch) - demo dbt with a CICD pipeline
 
 ![image](./images/cicd.drawio.png)
 
