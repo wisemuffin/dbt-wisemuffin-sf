@@ -15,6 +15,8 @@ This project is broken down into several repos to isolate environments and to si
 - [dbt-wisemuffin-sf-trading](https://github.com/wisemuffin/dbt-wisemuffin-sf-trading) - demo dbt features
 - [data-cicd-tpch](https://github.com/wisemuffin/data-cicd-tpch) - demo dbt with a CICD pipeline
 - [terraform-snowflake-fast-data-warehouse](https://github.com/wisemuffin/terraform-snowflake-fast-data-warehouse) - manages all cloud infrastructure.
+- [dbt-business-intelligence](https://github.com/wisemuffin/dbt-business-intelligence) - demos how to use dbt's metrics and metadata in bi tools. Credit all goes to [flexanalytics repo](https://github.com/flexanalytics/dbt-business-intelligence)
+- [dbt-joining-snapshots](https://github.com/wisemuffin/dbt-joining-snapshots)
 
 ## features - snowflake
 
